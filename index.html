@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El boleto guinda — ¡Gana Increíbles Premios!</title>
+    <meta name="description"
+        content="Participa en la El boleto guinda 2026. Compra tu boleto y gana increíbles premios. Pago fácil por Yape o Plin." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+    <!-- ════ Navbar ════ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="navbar__logo"><img src="assets/logo.png" alt="El boleto guinda" /></a>
+            <ul class="navbar__links" id="navLinks">
+                <li><a href="#premios">Premios</a></li>
+                <li><a href="#info">Información</a></li>
+                <li><a href="#pago">Pago</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ════ Hero ════ -->
+    <section class="hero" id="hero">
+        <canvas id="heroParticles" class="hero__particles"></canvas>
+        <div class="container">
+            <div class="hero__content">
+                <span class="hero__badge">🎉 Edición 2026</span>
+                <h1 class="hero__title">¡Volvió el BOLETO <span>GUINDA!</span></h1>
+                <p class="hero__desc">Participa y llévate premios increíbles. Cada boleto es una oportunidad de ganar.
+                    ¡No te quedes fuera!</p>
+
+
+                <a href="#pago" class="hero__cta" id="heroCta">
+                    🎟️ ¡Compra tu Boleto Ahora!
+                </a>
+
+                <!-- Countdown timer -->
+                <p class="countdown__heading">⏳ El sorteo comienza en:</p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown__box">
+                        <span class="countdown__num" id="cd-days">00</span>
+                        <span class="countdown__label">Días</span>
+                    </div>
+                    <div class="countdown__sep">:</div>
+                    <div class="countdown__box">
+                        <span class="countdown__num" id="cd-hours">00</span>
+                        <span class="countdown__label">Horas</span>
+                    </div>
+                    <div class="countdown__sep">:</div>
+                    <div class="countdown__box">
+                        <span class="countdown__num" id="cd-mins">00</span>
+                        <span class="countdown__label">Min</span>
+                    </div>
+                    <div class="countdown__sep">:</div>
+                    <div class="countdown__box">
+                        <span class="countdown__num" id="cd-secs">00</span>
+                        <span class="countdown__label">Seg</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__image">
+                <img src="assets/prize-1.png" alt="Gran Premio — Smartphone de última generación" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ Prizes (Carousel) ════ -->
+    <section class="prizes" id="premios">
+        <div class="container">
+            <h2 class="section-title reveal">🏆 Premios Espectaculares</h2>
+            <p class="section-subtitle reveal">8 ganadores se llevarán estos increíbles premios</p>
+
+            <div class="prizes__wrapper">
+                <!-- Nav arrows -->
+                <button class="prizes__arrow prizes__arrow--left" id="prizeArrowLeft" aria-label="Anterior">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </button>
+                <button class="prizes__arrow prizes__arrow--right" id="prizeArrowRight" aria-label="Siguiente">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 6 15 12 9 18" />
+                    </svg>
+                </button>
+
+                <div class="prizes__carousel" id="prizesCarousel">
+
+                    <article class="prize-card">
+                        <span class="prize-card__badge">🥇 1er Premio</span>
+                        <div class="prize-card__img-wrap"><img src="assets/ipad.jpg" alt="iPad Apple 11&quot;"
+                                class="prize-card__img" /></div>
+                        <div class="prize-card__body">
+                            <h3 class="prize-card__title">iPad Apple 11"</h3>
+                            <p class="prize-card__desc">Chip A16, Wi-Fi, 128GB de almacenamiento.</p>
+                        </div>
+                    </article>
+
+                    <article class="prize-card">
+                        <span class="prize-card__badge">🥈 2do Premio</span>
+                        <div class="prize-card__img-wrap"><img src="assets/switch2.jpg" alt="Nintendo Switch 2"
+                                class="prize-card__img" /></div>
+                        <div class="prize-card__body">
+                            <h3 class="prize-card__title">Nintendo Switch 2</h3>
+                            <p class="prize-card__desc">La nueva consola de Nintendo para gaming portátil.</p>
+                        </div>
+                    </article>
+
+                    <article class="prize-card">
+                        <span class="prize-card__badge">🥉 3er Premio</span>
+                        <div class="prize-card__img-wrap"><img src="assets/maroon-5.jpg"
+                                alt="Entrada Platinum — Maroon 5" class="prize-card__img" /></div>
+                        <div class="prize-card__body">
+                            <h3 class="prize-card__title">Entrada Platinum — Maroon 5</h3>
+                            <p class="prize-card__desc">Entrada Platinum Lateral para el concierto de Maroon 5.</p>
+                        </div>
+                    </article>
+
+                    <article class="prize-card">
+                        <span class="prize-card__badge">🏅 4to Premio</span>
+                        <div class="prize-card__img-wrap"><img src="assets/bts.jpg" alt="Entrada Campo — BTS"
+                                class="prize-card__img" /></div>
+                        <div class="prize-card__body">
+                            <h3 class="prize-card__title">Entrada Campo — BTS</h3>
+                            <p class="prize-card__desc">Entrada Campo para BTS el 9 de octubre.</p>
+                        </div>
+                    </article>
+
+                    <article class="prize-card">
+                        <span class="prize-card__badge">🏅 5to Premio</span>
+                        <div class="prize-card__img-wrap"><img src="assets/album-panini.jpg" alt="Álbum Mundial 26"
+                                class="prize-card__img" /></div>
+                        <div class="prize-card__body">
+                            <h3 class="prize-card__title">Álbum Mundial 26</h3>
+                            <p class="prize-card__desc">Álbum Mundial 2026 + Paquetón de figuras coleccionables.</p>
+                        </div>
+                    </article>
+
+                    <article class="prize-card">
+                        <span class="prize-card__badge">🏅 6to Premio</span>
+                        <div class="prize-card__img-wrap"><img src="assets/jblaudifonos.jpg"
+                                alt="Audífonos JBL Tune 720BT" class="prize-card__img" /></div>
+                        <div class="prize-card__body">
+                            <h3 class="prize-card__title">Audífonos JBL Tune 720BT</h3>
+                            <p class="prize-card__desc">Audífonos Over Ear inalámbricos con sonido JBL Pure Bass.</p>
+                        </div>
+                    </article>
+
+                    <article class="prize-card">
+                        <span class="prize-card__badge">🏅 7mo Premio</span>
+                        <div class="prize-card__img-wrap"><img src="assets/jbl-parlante.jpg" alt="Parlante JBL Go 5"
+                                class="prize-card__img" /></div>
+                        <div class="prize-card__body">
+                            <h3 class="prize-card__title">Parlante JBL Go 5</h3>
+                            <p class="prize-card__desc">Parlante portátil compacto con sonido potente.</p>
+                        </div>
+                    </article>
+
+                    <article class="prize-card">
+                        <span class="prize-card__badge">🏅 8vo Premio</span>
+                        <div class="prize-card__img-wrap"><img src="assets/100.jpg" alt="Premio de S/100"
+                                class="prize-card__img" /></div>
+                        <div class="prize-card__body">
+                            <h3 class="prize-card__title">Premio de S/100</h3>
+                            <p class="prize-card__desc">S/100 soles directo a tu cuenta.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- Carousel dots indicator -->
+            <div class="prizes__dots" id="prizeDots"></div>
+        </div>
+    </section>
+
+
+
+    <!-- ════ Quick Info ════ -->
+    <section class="quick-info" id="info">
+        <div class="container">
+            <h2 class="section-title reveal">📋 Información Rápida</h2>
+            <p class="section-subtitle reveal">Todo lo que necesitas saber en un vistazo</p>
+            <div class="info-cards">
+
+                <div class="info-card reveal">
+                    <span class="info-card__icon">📅</span>
+                    <span class="info-card__label">Fecha del Sorteo</span>
+                    <span class="info-card__value">12 de Junio, 2026</span>
+                </div>
+
+                <div class="info-card reveal">
+                    <span class="info-card__icon">🎥</span>
+                    <span class="info-card__label">Transmisión en Vivo</span>
+                    <a href="https://www.instagram.com/elsentimientoguinda/?hl=es" target="_blank" rel="noopener"
+                        class="info-card__value" style="text-decoration:underline; text-underline-offset:3px;">Ver en
+                        vivo aquí →</a>
+                </div>
+
+                <div class="info-card reveal">
+                    <span class="info-card__icon">💰</span>
+                    <span class="info-card__label">Costo del Boleto </span>
+                    <span class="info-card__value">S/ 5.00</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ Payment — How to Buy ════ -->
+    <section class="payment" id="pago">
+        <div class="container">
+            <h2 class="section-title reveal">🎟️ ¿Cómo comprar tu boleto?</h2>
+            <p class="section-subtitle reveal">Sigue estos sencillos pasos y asegura tu participación</p>
+            <div class="payment__box reveal">
+
+                <!-- Header -->
+                <div class="payment__icon">📋</div>
+                <h3 class="payment__title">Guía de Compra</h3>
+                <p class="payment__subtitle">Proceso rápido, seguro y 100% digital</p>
+
+                <!-- Steps -->
+                <div class="payment__steps">
+                    <div class="payment__step">
+                        <span class="payment__step-num">1</span>
+                        <span>Ingresa al <strong>formulario</strong> y complétalo correctamente con tus datos y la
+                            cantidad de boletos.</span>
+                    </div>
+                    <div class="payment__step">
+                        <span class="payment__step-num">2</span>
+                        <span>Realiza el pago mediante <strong>Yape, Plin o transferencia</strong> al número
+                            indicado.</span>
+                    </div>
+                    <div class="payment__step">
+                        <span class="payment__step-num">3</span>
+                        <span>Espera la <strong>validación de tu pago</strong> y recibirás tus tickets digitales en tu
+                            <strong>correo electrónico</strong>.</span>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="payment__divider"></div>
+
+                <!-- QR + CTA row -->
+                <div class="payment__cta-row">
+                    <div class="payment__qr">
+                        <img src="assets/qr-forms.png" alt="QR Formulario de Registro" class="payment__qr-img"
+                            id="qrPlaceholder" />
+                    </div>
+                    <div class="payment__cta-wrapper">
+                        <a href="https://forms.gle/TRX41JN6eKd5dDQi7" class="payment__cta-btn" id="registroBtn"
+                            target="_blank" rel="noopener">
+                            📝 Ir al Formulario de Registro
+                        </a>
+                        <p class="payment__cta-note">El formulario abrirá en una nueva pestaña</p>
+                    </div>
+                </div>
+
+                <div class="payment__note">
+                    📄 Revisa los <a
+                        href="https://udepoffice365ms-my.sharepoint.com/:w:/g/personal/nelly_inchaustegui_alum_udep_edu_pe/IQBJURBD8OZ_QaKUa-kEKGmzAZEd0B_1IZ7dcit_fUiK6nA"
+                        target="_blank" rel="noopener" class="payment__terms-link">términos y condiciones aquí</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ FAQ ════ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title reveal">❓ Preguntas Frecuentes</h2>
+            <p class="section-subtitle reveal">Resolvemos tus dudas</p>
+            <div class="faq__list">
+
+                <div class="faq-item reveal">
+                    <button class="faq-item__question" id="faq-q1">
+                        ¿Cómo sé que mi boleto está confirmado?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <div class="faq-item__answer-inner">
+                            Una vez que completes el forms, recibirás un mensaje de confirmación a tu correo
+                            electrónico, seguido (luego de ser aprobado) con
+                            tu número de boleto dentro de las siguientes 24 horas. También puedes revisar tus boletos comprados <a href="https://boleto-guinda.netlify.app/" target="_blank" rel="noopener" style="text-decoration:underline; text-underline-offset:3px; font-weight:600;">aquí</a>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-item__question" id="faq-q2">
+                        ¿Cuántos boletos puedo comprar?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <div class="faq-item__answer-inner">
+                            ¡Puedes comprar todos los que quieras! Cada boleto es una oportunidad adicional de ganar.
+                            Solo sigue los pasos previos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-item__question" id="faq-q3">
+                        ¿Dónde se transmitirá el sorteo?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <div class="faq-item__answer-inner">
+                            El sorteo se transmitirá en vivo a través de instagram.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ Contáctanos ════ -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <h2 class="section-title reveal">📬 Contáctanos</h2>
+            <p class="section-subtitle reveal">¿Tienes dudas o necesitas ayuda? ¡Escríbenos!</p>
+            <div class="contact__grid">
+                <div class="contact__card reveal">
+                    <span class="contact__icon">📱</span>
+                    <h3 class="contact__label">WhatsApp</h3>
+                    <a href="https://wa.me/51907570986" target="_blank" rel="noopener" class="contact__value">+51 907
+                        570 986</a>
+                </div>
+                <div class="contact__card reveal">
+                    <span class="contact__icon">📧</span>
+                    <h3 class="contact__label">Correo</h3>
+                    <a href="mailto:elsentimientoguinda@gmail.com"
+                        class="contact__value">elsentimientoguinda@gmail.com</a>
+                </div>
+                <div class="contact__card reveal">
+                    <span class="contact__icon">📍</span>
+                    <h3 class="contact__label">Síguenos</h3>
+                    <a href="https://www.instagram.com/elsentimientoguinda/?hl=es" target="_blank" rel="noopener"
+                        class="contact__value">@elsentimientoguinda</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ Footer ════ -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 elsentimientoguinda — Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ════ WhatsApp FAB ════ -->
+    <a href="https://wa.me/51907570986" target="_blank" rel="noopener" class="whatsapp-fab" id="whatsappFab"
+        aria-label="Contáctanos por WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
